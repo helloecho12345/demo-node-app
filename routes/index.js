@@ -13,7 +13,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  // log the submitted data to the terminal
+  console.log(req.body);
   res.render('form', { title: 'Registration Form'});
-})
+});
 
 module.exports = router;

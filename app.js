@@ -12,6 +12,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// using body-parser's urlencoded method allows us to handle data sent as application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true}));
 // tells app that whenever it receives a request from forward slash anything, it should use the routes file
 app.use('/', routes);
