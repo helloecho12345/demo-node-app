@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    <--- Appending an equals sign to an attribute is one method that Pug uses for interpolation --->
+    <--- Use this to pass the title dynamically to each template --->
+    title= '${title}'
+  body 
+    h1 My Amazing App 
+
+    block content 
