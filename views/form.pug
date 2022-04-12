@@ -2,12 +2,23 @@
 extends layout 
 
 block content
+  //- check if a data attribute exists and if so, use it to set the values of the respective fields. If it doesn't exist, we'll initialize it to an empty object, so that the form will still render correctly when loaded for the first time
+  -data = data || {}
+
+  //- check for an errors property and if it's present, loop over any errors and display them in a list
+  if errors 
+    ul
+      for error in errors
+        //- pug does interpolation by following the tag name with an equals sign 
+        li= error.msg
+
   form(action="." method="POST")
     label(for="name") Name: 
     input(
       type="text"
       id="name"
-      name="name"
+      name="name" 
+      value=data.name //- reference that attribute to set the field's value
     )
 
     label(for="email") Email: 
@@ -15,6 +26,7 @@ block content
       type="email"
       id="email"
       name="email"
+      value=data.email
     )
 
     input(type="submit" value="Submit")
