@@ -40,15 +40,14 @@ router.post('/',
   );
 // router.post('/', (req, res) => {
   // log the submitted data to the terminal
-  console.log(req.body);
-  res.render('form', { title: 'Registration Form'});
-});
+  // console.log(req.body);
+  // res.render('form', { title: 'Registration Form'});
 
 // middleware a.k.a router-level middleware
-router.METHOD(route, (req, res) => {
+// router.METHOD(route, (req, res) => {
   // the callback receives a req and res parameter, where req is an object full of info that is coming in
   // and res is an object full of methods for sending data back to the user
   // callback function
-});
+// });
 
 module.exports = router;

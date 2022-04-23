@@ -1,7 +1,8 @@
-// import express module and routes file into application
+// import express module into application
 const express = require('express');
 // require Node's native Path module which provides utilities for working with file and directory paths and helps build the path to our views folder
 const path = require('path');
+// import routes file into application
 const routes = require('./routes/index');
 const bodyParser = require('body-parser');
 
